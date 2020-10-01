@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedComponent } from './components/shared/shared.component';
 import { SharedDirective } from './directives/shared.directive';
 import { SharedPipe } from './pipes/shared.pipe';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 
 
 
@@ -17,6 +19,7 @@ import { SharedPipe } from './pipes/shared.pipe';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    CarouselModule.forRoot(),
   ],
   exports: [
     CommonModule,
@@ -25,6 +28,8 @@ import { SharedPipe } from './pipes/shared.pipe';
     SharedComponent,
     SharedDirective,
     SharedPipe,
+    CarouselModule
+  
   ]
 })
 export class SharedModule { }
