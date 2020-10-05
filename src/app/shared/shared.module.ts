@@ -34,6 +34,8 @@ import { ProductCartComponent } from './components/product-cart/product-cart.com
     SharedDirective,
     SharedPipe,
     CarouselModule,
+    ProductItemComponent,
+    ProductCartComponent,
     //HeaderModule
   
   ]

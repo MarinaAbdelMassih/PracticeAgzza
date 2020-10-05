@@ -1,23 +1,65 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-blue">
+  <div class="container">
+  <a class="navbar-brand dropdown" >
+      <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        English
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Arabic</a>
+       
+      </div>
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+    
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >Home</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="wishlist"  routerLinkActive="active">Wishlist</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="aboutus"  routerLinkActive="active">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="contactus"  routerLinkActive="active">Contact us </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="login"  routerLinkActive="active">Login </a>
+        </li>
+    </ul>
+  
+  </div>
+</div>
+</nav>
+
+
+<!--nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" routerLink="/home">Navbar</a>
-    <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed"
+    <button (click)="togglenav()" class="navbar-toggler" type="button" aria-controls="navbarSupportedContent"
+     aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed"
             [attr.aria-expanded]="!isCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
   
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+    <div class="collapse navbar-collapse" [class.show]="isOpen" id="navbarSupportedContent" >
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="/home">home</a>
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/" routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}">home</a>
         </li>
         <li class="nav-item dropdown" dropdown routerLinkActive="active">
           <a class="nav-link dropdown-toggle" role="button" dropdownToggle aria-haspopup="true" aria-expanded="false">
             Features
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown" *dropdownMenu>
-            <a class="dropdown-item" routerLink="/feature">Feature</a>
-            <a class="dropdown-item" routerLink="/feature/feature-one">Feature One</a>
-            <a class="dropdown-item" routerLink="/feature/feature-two">Feature Two</a>
+            <a class="dropdown-item" routerLink="/feature" routerLinkActive="active">Feature</a>
+            <a class="dropdown-item" routerLink="/feature/feature-one" routerLinkActive="active">Feature One</a>
+            <a class="dropdown-item" routerLink="/feature/feature-two" routerLinkActive="active">Feature Two</a>
           </div>
         </li>
         <li class="nav-item dropdown" dropdown>
@@ -31,5 +73,5 @@
         </li>
       </ul>
     </div>
-  </nav>
+  </nav>-->
   <!--[collapse]="isCollapsed" [isAnimated]="true"-->
