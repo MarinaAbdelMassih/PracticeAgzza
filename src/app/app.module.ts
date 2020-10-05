@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
-import { HeaderComponent } from './core/components/header/header.component';
+import { HeaderModule } from './core/components/header/header.module';
+
 import { FooterComponent } from './core/components/footer/footer.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
@@ -15,7 +16,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    
     FooterComponent,
   ],
   imports: [
@@ -24,6 +25,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
     BrowserAnimationsModule,
     SharedModule,
     HttpClientModule,
+     HeaderModule ,
     BsDropdownModule.forRoot(),
     CollapseModule.forRoot(),
   ],
