@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {SliderService} from '../../../core/services/slider.service';
+
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
@@ -6,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderComponent implements OnInit {
 
-  constructor() { }
+  data = [];
+
+  constructor(private serv: SliderService) {
+    this.serv.getImages().subscribe((d) => {
+      this.data = d
+      console.log(this.data)
+    });
+  }
 
   ngOnInit(): void {
   }
