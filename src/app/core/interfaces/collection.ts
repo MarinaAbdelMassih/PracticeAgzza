@@ -1,7 +1,7 @@
-import {Product} from '../interfaces/product';
+import { Product } from './product';
 
 export interface Collection {
-  id: number,
-  name: string,
-  items: Product[]
+  id: number;
+  name: string;
+  items: Product[];
 }

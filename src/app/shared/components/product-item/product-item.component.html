@@ -1,10 +1,11 @@
 <div class="card">
-  <div *ngFor="let item of colle">
-    <img class="card-img-top" src="assets/images/meme.png" alt="Card image cap">
+  <div>
+    <img [src]="product.images[0] ? product.images[0] : 'assets/images/meme.png'"
+         alt="Card image cap"
+         class="card-img-top">
     <div class="card-body">
-      <h5 class="card-title"> {{item.id}} Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">{{product.description | slice: 0: 100}}</p>
       <button>Add to Cart</button>
     </div>
   </div>

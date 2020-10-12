@@ -1,20 +1,16 @@
-import {Component, OnInit} from '@angular/core';
-import {CollectionsService} from '../../../core/services/collections.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { Product } from '../../../core/interfaces/product';
 
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
-  styleUrls: ['./product-item.component.scss']
+  styleUrls: ['./product-item.component.scss'],
 })
 export class ProductItemComponent implements OnInit {
 
-  colle;
+  @Input() product: Product;
 
-  constructor(private coll: CollectionsService) {
-    this.coll.getcollections().subscribe((d) => {
-      this.colle = d;
-      console.log(this.colle);
-    });
+  constructor() {
   }
 
 
