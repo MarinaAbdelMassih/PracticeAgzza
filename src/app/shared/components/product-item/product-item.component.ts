@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CollectionsService} from '../../../core/services/collections.service';
 
 @Component({
   selector: 'app-product-item',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductItemComponent implements OnInit {
 
-  constructor() { }
+  colle;
+
+  constructor(private coll: CollectionsService) {
+    this.coll.getcollections().subscribe((d) => {
+      this.colle = d;
+      console.log(this.colle);
+    });
+  }
+
 
   ngOnInit(): void {
   }

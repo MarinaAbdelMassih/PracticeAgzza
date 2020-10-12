@@ -1,11 +1,5 @@
 <carousel>
-  <slide>
-    <img src="assets/images/meme.png" alt="first slide" style="display: block; width: 100%;">
-  </slide>
-  <slide>
-    <img src="assets/images/meme.png" alt="second slide" style="display: block; width: 100%;">
-  </slide>
-  <slide>
-    <img src="assets/images/meme.png" alt="third slide" style="display: block; width: 100%;">
+  <slide *ngFor="let item of data">
+    <img [src]="item.mainImg" alt="first slide" style="display: block; width: 100%;">
   </slide>
 </carousel>

@@ -12,7 +12,7 @@ export class SliderComponent implements OnInit {
 
   constructor(private serv: SliderService) {
     this.serv.getImages().subscribe((d) => {
-      this.data = d
+      this.data = d.slider
       console.log(this.data)
     });
   }
